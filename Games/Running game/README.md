@@ -1,4 +1,4 @@
-# Sonic's Adventure - Corrida e Esquiva
+# Sonic Running game - Corrida e Pulo
 
 Bem-vindo ao Running game do Sonic! Um jogo simples onde o famoso ouriço azul, Sonic, embarca em uma jornada emocionante, correndo a toda velocidade e pulando sobre espinhos para alcançar a vitória.
 
@@ -18,6 +18,6 @@ Neste jogo, você controla o Sonic, correndo e desviando de espinhos que estão 
 ## Como Jogar
 
 Você pode jogar este jogo acessando:
-```html
+```text
 https://running-game-prime-two.vercel.app/
 ```
