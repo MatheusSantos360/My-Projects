@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>Game running</title>
+</head>
+<body>
+    
+    <section class="game">
+        <div class="score"><p id="score"></p></div>
+
+        <div class="game-action">
+            <img src="assets/Clouds.png" alt="">
+            <img src="assets/Clouds.png" alt="">
+            
+            <div class="player" id="player">
+                <img src="assets/sonic-running.gif" alt="">
+            </div>
+            <div class="spike">
+                <img src="assets/spike.png" alt="">
+            </div>
+        </div>
+        <div class="floor"></div>
+    </section>
+
+    <section class="game-over" id="gameOver">
+        <div class="game-over-content">
+            <h1>Game Over</h1>
+            <h2>Your score is: <br /> <span id="finalScore"></span></h2>
+            <button onclick="restart()">Restart</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

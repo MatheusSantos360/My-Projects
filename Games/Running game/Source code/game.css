@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.game {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    min-width: 500px;
+}
+
+.game-action {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgb(110, 139, 236), white);
+    /* background-image: url(assets/bla.jfif); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+
+/* player styles */
+
+.player {
+    position: absolute;
+    height: 100px;
+    left: 30px;
+    bottom: -4px;
+}
+
+.jump {
+    animation: jump 0.5s ease-in-out;
+}
+
+.player img {
+    height: 100%;
+}
+
+@keyframes jump {
+    0% {
+        bottom: -4px;
+    }
+    40% {
+        bottom: 200px;
+    }
+    50% {
+        bottom: 230px;
+    }
+    65% {
+        bottom: 200px;
+    }
+    100% {
+        bottom: -4px;
+    }
+}
+
+/* end of player styles */
+
+/* floor styles */
+
+.floor {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    /* background: url(assets/grass.jfif); */
+    background-color: rgb(103, 206, 103);
+    bottom: 0;
+    left: 0;
+}
+
+/* end of floor styles */
+
+/* spikes styles */
+
+.spike {
+    z-index: 20;
+    position: absolute;
+    height: 70px;
+    bottom: -4px;
+    right: calc(-24px - 40px);
+    animation: spike 1.2s linear infinite;
+    animation-delay: 3s;
+}
+
+.spike img {
+    height: 100%;
+}
+
+@keyframes spike {
+    from {
+        font-size: larger;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+/* end of spikes styles */
+
+/* score styles */
+
+.score {
+    z-index: 20;
+    position: absolute;
+    height: 20px;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.score p {
+    font-size: 2rem;
+}
+
+/* end of score styles */
+
+/* game over styles */
+
+.game-over {
+    transition: 0.5s;
+    text-align: center;
+    z-index: 100;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.OnGameOver {
+    animation: gameOver 0.5s;
+    bottom: 0;
+}
+
+@keyframes gameOver {
+    from {
+        bottom: 100%;
+    }
+    to {
+        bottom: 0;
+    }
+}
+
+.game-over h1 {
+    font-size: 3rem;
+    margin: -130px 0 30px 0;
+}
+
+.game-over p {
+    text-align: center;
+}
+
+.game-over button {
+    padding: 0.5rem 1rem;
+    margin: 2rem 0;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+/* end of game over styles */
+
+/* cloud styles */
+
+.game-action > img {
+    position: absolute;
+    width: 300px;
+    top: 50px;
+    animation: cloud 40s infinite linear;
+}
+
+@keyframes cloud {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+/* end of clouds styles */
