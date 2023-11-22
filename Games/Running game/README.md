@@ -23,4 +23,6 @@ https://running-game-prime-two.vercel.app/
 ```
 
 ## Baixar código fonte
+**Baixar ZIP**: 
+**Clonar repositório**:
 
